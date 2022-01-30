@@ -1,5 +1,6 @@
 var Userdb = require('../model/model');
 
+/************************user*********** */
 // create and save new user
 exports.create = (req,res)=>{
     // validate request
@@ -7,9 +8,7 @@ exports.create = (req,res)=>{
         res.status(400).send({ message : "Content can not be emtpy!"});
         return;
     }
-
-    // new user
-    //     
+    // new user  
     const user = new Userdb({
         name: req.body.name,
         cin: req.body.cin,
@@ -18,7 +17,6 @@ exports.create = (req,res)=>{
         password: req.body.password,
         role: req.body.role,
         region: req.body.region,
-        
     })
 
     // save user in the database
@@ -108,3 +106,6 @@ exports.delete = (req, res)=>{
             });
         });
 }
+
+
+

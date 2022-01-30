@@ -1,0 +1,106 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All dossiers</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update folder</h2>
+            <span class="text-light">Use the below form to Update a folder</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+
+         <form method="POST" id="update_dossier">
+            <div class="new_dossier">
+                <div class="form-group">
+                    <label for="ref" class="text-light">Reference : </label>
+                    <input type="hidden" name="id" value="<%= dossier._id %>">
+                    <input type="text" name="ref" value="<%= dossier.ref %>" placeholder="A1250e">
+                </div>
+                <div class="form-group">
+                    <label for="dateAudiance" class="text-light">Date de Audiance  : </label>
+                    <input type="text" name="dateAudiance" value="<%= dossier.dateAudiance %>" placeholder="12-02-2020">
+                </div>
+            <div class="form-group">
+            <label for="complete" class="text-light">Manques :</label>
+            <div class="radio inline">
+                <input type="radio" id="chkYes" name="chkPassPort"  value="<%= dossier.chkYes %>" checked onclick="ShowHideDiv()"  >
+                <label for="chkYes" class="radio-label ">Oui</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="chkNo" name="chkPassPort"  value="<%= dossier.chkNo %>" onclick="ShowHideDiv()"  >
+                <label for="chkNo" class="radio-label ">Non</label>
+            </div>
+            <div  class="form-group" id="dvPassportN" style="display: none">
+                <label for="date_negotiation" class="text-light">Date de Négotiation : </label>
+                <input type="text" id="start" name="date_negotiation" value="<%= dossier.date_negotiation %>" placeholder ="2021-07-22" >
+                <label for="jugement" class="text-light">Jugement: </label>
+                <textarea  type="text" rows="5" cols="33" id="jugement"  value="<%= dossier.jugement %>" name ="jugement"> ... </textarea><br/><br/>
+                <label for="nom_juge" class="text-light">Juge : </label>
+                <input type="text" name="nom_juge"  value="<%= dossier.nom_juge %>" placeholder="Foulen ben foulen">
+                <label for="date_r" class="text-light">Date réception : </label>
+                <input type="text" id="date_r"  value="<%= dossier.date_r%>" name="date_reception"placeholder="2021-07-22" >
+                <label for="date_l" class="text-light">Date Livraison : </label>
+                <input type="text" id="date_l"  value="<%= dossier.date_l %>"name="date_livraison"placeholder="2021-07-22" >
+            </div>
+
+            <div  class="form-group" id="dvPassport" style="display: none">
+                <label for="nom_etat" class="text-light">Etat :</label>
+                <div class="radio inline">
+                    <input type="radio" id="chkYesM" name="chkPassPortn"  value="<%= dossier.nom_etat %>" checked onclick="ShowHideDiv()"  >
+                    <label for="chkYesM" class="radio-label ">توجه</label>
+                </div>
+                <div class="radio inline">
+                    <input type="radio" id="chkNoM" name="chkPassPortn"  value="<%= dossier.nom_etat %>"  onclick="ShowHideDiv()"  >
+                    <label for="chkNoM" class="radio-label ">تحرير</label>
+                </div> 
+
+                <div  class="form-group" id="dvPassportM" style="display: none">
+                 <label for="datet" class="text-light">Date : </label>
+                    <input type="text" id="datet" name="datet" value="<%= dossier.datet %>"  placeholder="2021-07-22" >
+                    <label for="maps_code" class="text-light">Lieu : </label>
+                    <input type="text" id="start" name="maps_code" value="<%= dossier.maps_code%>"  placeholder="2021-07-22" >
+                    <label for="nom_juge" class="text-light">Juge : </label>
+                    <input type="text" name="nom_juge" value="<%= dossier.nom_juge %>"  placeholder="Foulen ben foulen">
+                  
+                </div>
+                <div  class="form-group" id="dvPassportNM" style="display: none">
+                    <label for="dater" class="text-light">Date : </label>
+                       <input type="text" id="start" name="dater"  value="<%= dossier.dater %>"  placeholder="2021-07-22" >
+                       <label for="nom_juge" class="text-light">Juge : </label>
+                       <input type="text" name="nom_juge" value="<%= dossier.nom_juge %>"  placeholder="Foulen ben foulen">
+                </div>
+
+            </div>
+           
+           
+           
+                
+</div>
+
+ <div class="form-group">
+    <button type="submit" class="btn text-dark update">Save</button>
+</div>
+
+</div>
+</form>
+
+
+
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+    
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+    <!-- /include footer -->

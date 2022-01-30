@@ -1,0 +1,21 @@
+<% for(var i = 0; i < dossiers.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= dossiers[i].ref %></td>
+        <!--<td><%= dossiers[i].nom_juge %></td>-->
+        <td><%= dossiers[i].dateAudiance %></td>
+        <td><%= dossiers[i].nom_etat %></td>
+        <td><%= dossiers[i].complete %></td>
+        <td><%= dossiers[i].maps_code %></td>
+        <td><%= dossiers[i].date_r %></td>
+        <td><%= dossiers[i].date_r %></td>
+        <td>
+            <a href="/update-dossier?id=<%= dossiers[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= dossiers[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

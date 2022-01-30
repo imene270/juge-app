@@ -1,6 +1,6 @@
 
 <!-- include header -->
-    <%- include('include/_header') %>
+<%- include('include/_header') %>
 <!-- /include header -->
 
 <link rel="stylesheet" href="css/style.css">
@@ -10,20 +10,15 @@
     <main id="site-main">
         <div class="container">
             <div class="form-title text-center">
-                <h2 class="text-dark">Liste des juges </h2>
-            </div>
-
-            <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
-                    <span class="text-gradient">Ajouter des nouveaux juges  <i class="fas fa-user"></i></span>
-                </a>
+                <h2 class="text-dark">Liste des dossiers </h2>
             </div>
 
             <div class="box-nav d-flex justify-between">
                 <a href="/add-dossier" class="border-shadow">
-                    <span class="text-gradient">Ajouter des nouveaux dossiers  <i class="fas fa-user"></i></span>
+                    <span class="text-gradient">Ajouter des nouveaux dossier  <i class="fas fa-user"></i></span>
                 </a>
             </div>
+
             <!-------------barre de recherche --
             <form>
                 <div>
@@ -50,17 +45,19 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Nom et prenom </th>
-                            <th>Cin</th>
-                            <th>Email</th>
-                            <th>Telephone</th>
-                            <th>Role</th>
-                            <th>Region</th> 
+                            <th>Ref</th>
+                           <!-- <th>nom du juge</th> -->    
+                            <th>date d'audiance</th>
+                            <th>etat</th>
+                            <th>complete</th>
+                            <th>Adresse</th> 
+                            <th>Date Reception</th> 
+                            <th>Date Livraison</th> 
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <%- include('include/_show') %>
+                        <%- include('include/_showD') %>
                     </tbody>
                 </table>
             </form>
