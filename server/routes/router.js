@@ -12,7 +12,7 @@ const controllerd = require('../controller/controllerd');
  *  @description Root Route
  *  @method GET /
  */
-route.get('/', services.homeRoutes);
+route.get('/a', services.homeRoutes);
 
 /**
  *  @description add users
@@ -62,6 +62,10 @@ route.put('/api/dossiers/:id', controllerd.update);
 route.delete('/api/dossiers/:id', controllerd.delete);
 
 /************************** */
-
   
+
+route.get('/index',(req,res)=> {
+    res.render('index.ejs')
+})
+
 module.exports = route

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styleRegister.css">
+    <link rel="stylesheet" href="css/styleRegister.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
@@ -12,29 +12,29 @@
       <form action="/register" method="POST">
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Nom</span>
-            <input type="text" placeholder="Entrer votre nom" required>
+            <span class="details">Nom et prenom : </span>
+            <input type="text" name="name" placeholder="Entrer votre nom" required>
           </div>
           <div class="input-box">
-            <span class="details">Prenom</span>
-            <input type="text" placeholder="Entrer votre prenom" required>
+            <span class="details">Cin </span>
+            <input type="text" name="cin" placeholder="Entrer votre cin" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Entrer votre email" required>
+            <input type="text" name="email" placeholder="Entrer votre email" required>
           </div>
           <div class="input-box">
             <span class="details">Téléphone</span>
-            <input type="text" placeholder="Entrer votre numéro de Téléphone" required>
+            <input type="text" name="telephone" placeholder="Entrer votre numéro de Téléphone" required>
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Entrer votre password" required>
+            <input type="text"  name="password" placeholder="Entrer votre password" required>
           </div>
-          <div class="input-box">
+         <!-- <div class="input-box">
             <span class="details">Confirm Password</span>
             <input type="text" placeholder="Confirme votre password" required>
-          </div>
+          </div> -->
           <div class="input-box">
             <span class="details">Role</span>
             <select  type="liste" name ="role" >
@@ -61,10 +61,6 @@
                 <option value="Téboulba">Téboulba</option>
                 <option value="Zéramdine">Zéramdine</option>
             </select>
-          </div>
-          <div class="input-box">
-            <span class="details">CIN</span>
-            <input type="text" placeholder="Entrer votre CIN" required>
           </div>
         </div>
         
