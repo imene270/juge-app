@@ -1,10 +1,11 @@
-# Un projet tutoré 
+## Un projet tutoré 
 
 Dans ce projet, nous allons créer une application node avec express et mongodb.
 
 C'est un projet tutoré pour la gestion des dossiers juridiques. 
 
-# Pour exécuter ce projet, clonez-le et installez les modules à l'aide de : 
+Pour exécuter ce projet, clonez-le et installez les modules à l'aide de : 
+
 ```
 npm install
 ```
