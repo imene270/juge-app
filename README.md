@@ -1,15 +1,18 @@
-# CRUD_Application_Node
-In this project, we are going to create node CRUD application with express and mongodb.
+# Un projet tutoré 
 
-#### To Run this project Clone it and install modules using
+Dans ce projet, nous allons créer une application node avec express et mongodb.
+
+C'est un projet tutoré pour la gestion des dossiers juridiques. 
+
+# Pour exécuter ce projet, clonez-le et installez les modules à l'aide de : 
 ```
 npm install
 ```
 
-Then Create config.env file and create PORT and MONGO_URI Variable and specify Value.
-That's it. You are ready to go. To execute this project just type
+Ensuite, créez le fichier config.env et créez la variable PORT et MONGO_URI et spécifiez la valeur.
+C'est ça. Vous êtes prêt à partir. Pour exécuter ce projet, tapez simplement
+
 ```
 npm start
 ```
 
-Enjoy...!
